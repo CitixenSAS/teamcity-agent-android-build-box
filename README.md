@@ -1,6 +1,6 @@
 # Docker Teamcity Minimal Agent Android Build Box 
 
-[![docker icon](https://dockeri.co/image/frankyjquintero/teamcity-agent-android-build-box)](https://hub.docker.com/r/frankyjquintero/teamcity-agent-android-build-box/)
+[![docker icon](https://dockeri.co/image/citixensas/teamcity-agent-android-build-box)](https://hub.docker.com/r/citixensas/teamcity-agent-android-build-box/)
 
 
 ## Introduction
@@ -12,11 +12,10 @@ A **docker** image build with teamcity-minimal-agent + **Android** build environ
 
 It includes the following components:
 
-* Ubuntu 18.04
+* jetbrains/teamcity-minimal-agent:latest
 * Android SDK 28
 * Android build tools:
   * 28.0.3
-* Android NDK r20
 * extra-android-m2repository
 * extra-google-m2repository
 * extra-google-google\_play\_services
@@ -24,9 +23,9 @@ It includes the following components:
 
 ## Docker Pull
 
-The docker image is publicly automated build on [Docker Hub](https://hub.docker.com/r/frankyjquintero/teamcity-agent-android-build-box/) based on the Dockerfile in this repo, so there is no hidden stuff in it. To pull the latest docker image:
+The docker image is publicly automated build on [Docker Hub](https://hub.docker.com/r/citixensas/teamcity-agent-android-build-box/) based on the Dockerfile in this repo, so there is no hidden stuff in it. To pull the latest docker image:
 
-    docker pull frankyjquintero/teamcity-agent-android-build-box:latest
+    docker pull citixensas/teamcity-agent-android-build-box:latest
 
 ## Usage
 
@@ -35,24 +34,24 @@ The docker image is publicly automated build on [Docker Hub](https://hub.docker.
 You can use this docker image to build your Android project with a single docker command:
 
     cd <android project directory>  # change working directory to your project root directory.
-    docker run --rm -v `pwd`:/project frankyjquintero/teamcity-agent-android-build-box bash -c 'cd /project; ./gradlew build'
+    docker run --rm -v `pwd`:/project citixensas/teamcity-agent-android-build-box bash -c 'cd /project; ./gradlew build'
 
 Run docker image with interactive bash shell:
 
-    docker run -v `pwd`:/project -it frankyjquintero/teamcity-agent-android-build-box
+    docker run -v `pwd`:/project -it citixensas/teamcity-agent-android-build-box
 
 
 ## Docker Build Image
 
 If you want to build the docker image by yourself, you can use following command.
 
-    docker build -t frankyjquintero/teamcity-agent-android-build-box .
+    docker build -t citixensas/teamcity-agent-android-build-box .
 
 
 
 ## Contribution
 
-If you want to enhance this docker image or fix something, feel free to send [pull request](https://github.com/frankyjquintero/teamcity-agent-android-build-box/pull/new/master).
+If you want to enhance this docker image or fix something, feel free to send [pull request](https://github.com/citixensas/teamcity-agent-android-build-box/pull/new/master).
 
 
 ## References
