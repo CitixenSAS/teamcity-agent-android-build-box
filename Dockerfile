@@ -1,4 +1,4 @@
-FROM jetbrains/teamcity-minimal-agent:latest
+FROM jetbrains/teamcity-minimal-agent:latest:2019.1.2
 
 LABEL maintainer="Franky J. Quintero"
 
